@@ -1,3 +1,12 @@
+:root {
+    --font-size-sm: clamp(0.9rem, 0.57vw + 0.67rem, 1.13rem);
+    --font-size-base: clamp(1.13rem, 0.95vw + 0.74rem, 1.5rem);
+    --font-size-md: clamp(1.41rem, 1.51vw + 0.79rem, 2rem);
+    --font-size-lg: clamp(1.76rem, 2.3vw + 0.82rem, 2.67rem);
+    --font-size-xl: clamp(2.2rem, 3.44vw + 0.8rem, 3.55rem);
+    --font-size-xxl: clamp(2.75rem, 5.05vw + 0.69rem, 4.74rem);
+    --font-size-xxxl: clamp(3.43rem, 7.31vw + 0.46rem, 6.31rem);
+}
 /* Hide unused content in the theme */
 .notion-navbar, .notion-header {
     display: none !important;
@@ -8,28 +17,52 @@ h1.notion-heading,
 h2.notion-heading {
     align-self: center;
     width: calc(100vw - 3em);
-    margin: 1em auto;
+    margin: 1em 0;
     text-align: center;
-    font-size: 3.6em;
+    font-size: var(--font-size-xl);
 }
 
 h3.notion-heading {
     align-self: center;
-    margin: 1em auto;
+    margin: 1em 0;
     text-align: center;
-    font-size: 3em;
+    font-size: var(--font-size-lg);
 }
 
 .notion-text__content {
-    font-size: 1.5em;
+    font-size: var(--font-size-base);
 }
 
 .notion-quote {
-    margin: 1em -3em;
-    font-size: 2.3em;
+    position: relative;
+    align-self: center;
+    width: 80vw;
+    margin: 1em 0;
+    font-size: var(--font-size-md);
     text-align: center;
     font-weight: bold;
     border: none;
+}
+
+.notion-quote::before{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z'/%3E%3C/svg%3E");
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: .1;
+}
+.notion-quote::after{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z'/%3E%3C/svg%3E");;
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: .1;
 }
 
 /* Align elements */
@@ -41,15 +74,4 @@ h3.notion-heading {
 .notion-image.full-width img{
     width: 100%;
     object-fit: cover;
-}
-
-@media screen and (max-screen: 650px) {
-    h1.notion-heading,
-    h2.notion-heading {
-        margin: 1em 2em;
-    }
-
-    h3.notion-heading {
-        margin: 1em 2em;
-    }
 }
