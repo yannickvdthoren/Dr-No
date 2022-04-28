@@ -19,18 +19,18 @@ h2.notion-heading {
     width: calc(100vw - 3em);
     margin: 1em 0;
     text-align: center;
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl) !important;
 }
 
 h3.notion-heading {
     align-self: center;
     margin: 1em 0;
     text-align: center;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg) !important;
 }
 
 .notion-text__content {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base) !important;
 }
 
 .notion-quote {
@@ -38,7 +38,7 @@ h3.notion-heading {
     align-self: center;
     width: 80vw;
     margin: 1em 0;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-md) !important;
     text-align: center;
     font-weight: bold;
     border: none !important;
