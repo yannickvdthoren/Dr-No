@@ -41,7 +41,7 @@ h3.notion-heading {
     font-size: var(--font-size-md);
     text-align: center;
     font-weight: bold;
-    border: none;
+    border: none !important;
 }
 
 .notion-quote::before{
