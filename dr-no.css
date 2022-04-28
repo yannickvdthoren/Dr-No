@@ -1,3 +1,7 @@
+/* Hide unused content in the theme */
+.notion-navbar, .notion-header {
+    display: none !important;
+}
 body{
     background: red !important;
 }
